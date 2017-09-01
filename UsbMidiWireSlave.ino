@@ -1,9 +1,10 @@
 /* UsbMidiWireSlave
  * 
- * Reads MIDI messages from USB Host Shield and forwards them to I2C master.
+ * Functions as an I2C slave, reading MIDI messages from a USB Host and
+ * writing them to the I2C master.
  *  
- * Install this sketch on an Arduino board connected to a USB Host Shield,
- * and install a Wire master on a second device.
+ * Install this sketch on an Arduino attached to a USB Host Shield, or an 
+ * Arduino Mega ADK, and install a Wire master sketch on a second device.
  */
 
 #include <usbh_midi.h>
