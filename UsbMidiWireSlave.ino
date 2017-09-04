@@ -37,6 +37,6 @@ void requestEvent() {
   if (Usb.getUsbTaskState() == USB_STATE_RUNNING) {
     size = Midi.RecvData(message);
   }
-  Wire.write((size == 3) ? message : emptyMessage, 3);
+  Wire.write((size != 0) ? message : emptyMessage, 3);
 }
 
